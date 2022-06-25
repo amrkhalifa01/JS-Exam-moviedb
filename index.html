@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="author" content="AAK" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <title>MovieDB</title>
+  <link rel="icon" href="images/icon.png" />
+  <link rel="stylesheet" href="css/all.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body class="bg-black">
+
+  <!------------------------------- nav ------------------------------->
+  <nav id="height" class="vh-100 bg-black text-white font-light d-flex justify-content-between">
+    <div class="nav-bar d-flex flex-column justify-content-between h-100 p-4">
+      <ul class="list-unstyled overflow-hidden">
+        <li><a href="#" class="category">Now playing</a></li>
+        <li><a href="#" class="category">Popular</a></li>
+        <li><a href="#" class="category">Top Rated</a></li>
+        <li><a href="#" class="category">Trending</a></li>
+        <li><a href="#" class="category">Upcoming</a></li>
+        <li><a href="#contact" class="to-contact">Contact Us</a></li>
+      </ul>
+      <div>
+        <div class="social mb-2">
+          <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://www.globe.com/"><i class="fa-solid fa-globe" target="_blank"></i></a>
+        </div>
+        <p>Copyright Â© 2019 All Rights Reserved.</p>
+      </div>
+    </div>
+    <div class="side-bar d-flex justify-content-between align-items-center flex-column  px-3 py-4 bg-white">
+      <div>
+        <img src="images/logo.png" alt="logo">
+      </div>
+      <div class="burger-icon">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div class="d-flex flex-column">
+        <a href="https://www.globe.com/"><i class="fa-solid fa-globe mb-2"></i></a>
+        <a href="#"><i class="fa-solid fa-share-nodes"></i></a>
+      </div>
+    </div>
+  </nav>
+  <!------------------------------- Search ------------------------------->
+  <section id="search">
+    <div class="container p-5 pb-4">
+      <div class="row px-5">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <input id="searchAllMovies" type="text" placeholder="get movie by word..."
+            class="form-control custom-input p-2">
+        </div>
+        <div class="col-md-6">
+          <input id="searchCurrent" type="text" placeholder="search..." class="form-control custom-input p-2">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!------------------------------- Movies ------------------------------->
+  <section id="movies">
+    <div class="container p-5">
+      <div id="posts" class="row px-5 g-4">
+      </div>
+    </div>
+  </section>
+  <!------------------------------- Contact ------------------------------->
+  <section id="contact">
+    <div class="container p-5 pt-4">
+      <h2 class="font-light text-white px-5 mb-4">ContactUs...</h2>
+      <div class="row px-5 g-4">
+        <div class="col-lg-6">
+          <div class="overflow-hidden p-2">
+            <input id="userName" type="text" placeholder="Enter Your Name" class="form-control custom-input p-2">
+            <div class="alert" role="alert">
+              Enter Valid Name !!
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="overflow-hidden p-2">
+            <input id="userEmail" type="email" placeholder="Enter Email" class="form-control custom-input p-2">
+            <div class="alert alert-danger" role="alert">
+              Enter Valid Email !!
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="overflow-hidden p-2">
+            <input id="userPhone" type="number" placeholder="Enter Phone" class="form-control custom-input p-2">
+            <div class="alert alert-danger" role="alert">
+              Enter Your Phone Number - EX. 01234567891
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="overflow-hidden p-2">
+            <input id="userAge" type="number" placeholder="Enter Age" class="form-control custom-input p-2">
+            <div class="alert alert-danger" role="alert">
+              Enter Valid Email !!
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="overflow-hidden p-2">
+            <input id="userPassword" type="password" placeholder="Enter Password" class="form-control custom-input p-2">
+            <div class="alert alert-danger" role="alert">
+              Entre Valid Password - Minimum eight characters, at least one letter AND one number
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="overflow-hidden p-2">
+            <input id="rePassword" type="password" placeholder="Enter RePassword" class="form-control custom-input p-2">
+            <div class="alert alert-danger" role="alert">
+              Password Does Not Match !!
+            </div>
+          </div>
+        </div>
+        <div class="mt-0">
+          <button id="submit" class="btn btn-custom shadow-none px-4 mt-4" disabled>Submit</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

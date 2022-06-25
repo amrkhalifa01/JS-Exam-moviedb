@@ -1,0 +1,192 @@
+/* Start Global Styling */
+html {
+  scroll-behavior: unset !important;
+}
+
+@font-face {
+  font-family: "Myriad Pro Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Regular"), url("../webfonts/MYRIADPRO-REGULAR.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Myriad Pro Light";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Light"), url("../webfonts/MyriadPro-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Myriad Pro Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Bold"), url("../webfonts/MYRIADPRO-BOLD.woff") format("woff");
+}
+
+body {
+  font-family: "Myriad Pro Regular";
+}
+
+.font-regular {
+  font-family: "Myriad Pro Regular";
+}
+
+.font-light {
+  font-family: "Myriad Pro Light";
+}
+
+.font-bold {
+  font-family: "Myriad Pro Bold";
+}
+
+.custom-input {
+  border: 0;
+  border-radius: 5px 5px 0px 0px !important;
+  border-bottom: 1px solid var(--white-color) !important;
+  color: var(--white-color) !important;
+  background-color: transparent !important;
+}
+
+input::placeholder {
+  text-align: center;
+}
+
+input:focus {
+  box-shadow: 0px 0px 3px 1px var(--white-color) !important;
+}
+
+:root {
+  --text-gray: #f9f6f6;
+  --white-color: #fff;
+  --red-color: #ff655c;
+  --dark-red: #dc3545;
+}
+
+/* End Global Styling */
+
+/* Start Nav */
+nav {
+  width: fit-content;
+  position: fixed;
+  left: -250px;
+  z-index: 9999;
+}
+
+.nav-bar {
+  width: 250px;
+}
+
+.nav-bar li {
+  margin-bottom: 25px;
+  padding-top: 300px;
+  opacity: 0;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: var(--text-gray);
+  transition: all 0.3s;
+}
+
+.nav-bar a:hover {
+  color: #ff655c;
+}
+
+.social a {
+  padding-inline-end: 10px;
+  color: var(--white-color);
+}
+
+.nav-bar p {
+  color: var(--text-gray);
+}
+
+.side-bar img {
+  width: 30px;
+}
+
+.side-bar {
+  opacity: 0.1;
+}
+
+.burger-icon i {
+  font-size: 25px;
+  color: #000;
+  cursor: pointer;
+}
+
+.side-bar a {
+  color: #000;
+}
+
+/* End Nav */
+
+
+/* Start Movies*/
+.movie {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.movie:hover .movie-cap {
+  transform: translateY(0);
+}
+
+#posts img {
+  transition: all 0.5s;
+}
+
+.movie:hover img {
+  transform: scale(1.15) rotate(3deg);
+}
+
+.movie-cap {
+  text-align: center;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  transform: translateY(100%);
+  transition: all 1s;
+}
+
+.movie-cap h2 {
+  font-family: "Myriad Pro Light";
+}
+
+/* End Movies */
+
+/* Start Contact */
+
+#contact .btn-custom {
+  background-color: transparent;
+  border: 1px solid var(--dark-red);
+  color: var(--red-color);
+  transition: all 0.3s;
+}
+
+#contact .btn-custom:hover {
+  color: var(--white-color);
+  background-color: var(--dark-red);
+}
+
+#contact .alert {
+  margin: 20px 0 0 0;
+  padding: 10px;
+  font-size: 14px;
+  font-family: "Myriad Pro Light";
+  border: none;
+  color: var(--white-color);
+  background-color: rgba(220, 53, 69, 0.4);
+  display: none;
+  position: relative;
+  left: -100%;
+}
+
+/* End Contact */
