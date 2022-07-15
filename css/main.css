@@ -1,8 +1,4 @@
 /* Start Global Styling */
-html {
-  scroll-behavior: unset !important;
-}
-
 @font-face {
   font-family: "Myriad Pro Regular";
   font-style: normal;
@@ -63,9 +59,30 @@ input:focus {
   --dark-red: #dc3545;
 }
 
+.side-bar-w {
+  min-width: 62px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(59, 59, 59);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(190, 190, 190);
+}
+
 /* End Global Styling */
 
 /* Start Nav */
+
 nav {
   width: fit-content;
   position: fixed;
@@ -148,7 +165,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   position: absolute;
   inset: 0;
   overflow: hidden;

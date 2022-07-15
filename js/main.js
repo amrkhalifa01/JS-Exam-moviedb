@@ -49,10 +49,10 @@ function displayData(movies) {
         <div class="movie">
         <img src="https://image.tmdb.org/t/p/w500${movies[i].poster_path}" onerror="src='images/notFound.jpg'" alt="movie" class="w-100">
         <div class="movie-cap">
-            <h2>${movies[i].original_title}</h2>
-            <p>${movies[i].overview}</p>
-            <h6>rate: ${movies[i].vote_average}</h6>
-            <h6>${movies[i].release_date}</h6>
+            <h2 class="font-bold">${movies[i].original_title}</h2>
+            <p class="font-light">${movies[i].overview}</p>
+            <h6 class="font-light">rate: ${movies[i].vote_average}</h6>
+            <h6 class="font-light">${movies[i].release_date}</h6>
         </div>
         </div>
     </div>`
@@ -65,6 +65,7 @@ async function getMoviesByWord(word) {
     let response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=961415d22bc62f337bb599ca45cf0653&query=${word}&language=en-US&page=1&include_adult=false`);
     let date = await response.json();
     let allSearchResult = date.results;
+    currentMovies = allSearchResult
     displayData(allSearchResult);
 }
 
@@ -123,15 +124,9 @@ $(window).resize(function () {
     $("#height").css({ "height": `${currentWindowH}px`, "transition": "height 0.3s" });
 })
 
-// enhance scroll behavior
-$("nav .to-contact").click(function () {
-    let currentHref = $(this).attr("href");
-    let currentOffset = $(currentHref).offset().top;
-    $("body , html").animate({ scrollTop: currentOffset }, 2000);
-})
-
 // user name validation
 $("#userName").change(function () {
+
     let nameInputVal = $("#userName").val();
     if (validationModule.validateUserName(nameInputVal) == true) {
         $(this).removeClass("is-invalid").addClass("is-valid");
@@ -239,7 +234,6 @@ function switchBTN() {
     let userAge = validationModule.validateUserAge($("#userAge").val());
     let userPassword = validationModule.validateUserPassword($("#userPassword").val());
     let rePassword = validationModule.validateRePassword($("#userPassword").val(), $("#rePassword").val());
-    console.log(rePassword);
     if (userName && userEmail && userPhone && userAge && userPassword && rePassword == true) {
         $("#submit").removeAttr("disabled");
     } else {
